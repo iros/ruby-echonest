@@ -4,12 +4,12 @@ class Section
   def initialize(start, duration)
     @start = start
     @duration = duration
-  end
-  
-  def to_json
     @props = Hash.new
     @props["start"] = @start
     @props["duration"] = @duration
+  end
+  
+  def to_json
     @props.to_json
   end
 end

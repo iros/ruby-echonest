@@ -1,13 +1,13 @@
 class Bar < ValueWithConfidence
   def start
     value
-  end
-  
-  def to_json
     if (!defined? @props)
       @props = Hash.new
     end
     @props["start"] = start
+  end
+  
+  def to_json
     @props.to_json
   end
   
