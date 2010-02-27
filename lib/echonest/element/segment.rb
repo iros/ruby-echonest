@@ -9,4 +9,13 @@ class Segment < Section
     @pitches = pitches
     @timbre = timbre
   end
+  
+  def to_json
+    @props = Hash.new
+    @props["timbre"] = @timbre
+    @props["loudness"] = @loudness
+    @props["max_loudness"] = @max_loudness
+    @props["pitches"] = @pitches
+    @props.to_json
+  end
 end

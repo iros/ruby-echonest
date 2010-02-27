@@ -8,6 +8,7 @@ require 'echonest/element/section'
 require 'echonest/element/segment'
 require 'echonest/element/loudness'
 require 'echonest/element/tatum'
+require 'json'
 
 def Echonest(api_key) Echonest::Api.new(api_key) end
 

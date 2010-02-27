@@ -5,4 +5,11 @@ class Section
     @start = start
     @duration = duration
   end
+  
+  def to_json
+    @props = Hash.new
+    @props["start"] = @start
+    @props["duration"] = @duration
+    @props.to_json
+  end
 end
